@@ -1,9 +1,7 @@
 package com.arabsoft.marinaBack.dto;
 
 import java.io.Serializable;
-import java.util.Date;
 
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,23 +18,14 @@ import jakarta.persistence.Table;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Consommation")
-public class Consommation implements Serializable{
+@Table(name = "Carte")
+public class Carte implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_cons;
+    private int id_carte;
 
-    private float prix_unit;
-    private int qte;
-    private Date deb_cons;
-    private Date fin_cons;
-    private Date date_sys;
-    private String offre;
-
-    @PrePersist
-    protected void onCreate() {
-        date_sys = new Date();
-    }
+    private String lib_carte;
+    private int cpt_carte;
 
 }

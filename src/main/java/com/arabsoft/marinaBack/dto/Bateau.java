@@ -53,4 +53,12 @@ public class Bateau implements Serializable{
     private String mobile_bat;
     private String email_bat;
     private String observation;
+    private Date date_mvt;
+    private Date depart_mvt;
+    private Date arrivee_mvt;
+
+    private int id_type_bat;
+    private int id_cli;
+    private int id_port;
+
 }

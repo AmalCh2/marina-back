@@ -24,4 +24,6 @@ public class Role implements Serializable {
     private Long id_role;
 
     private String lib_role;
+
+    private Long id_utilisateur;
 }

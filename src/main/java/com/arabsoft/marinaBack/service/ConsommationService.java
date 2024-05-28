@@ -52,7 +52,6 @@ public class ConsommationService {
         if(consommation.getDeb_cons()!= null ) { oldConsommationFound.setDeb_cons(consommation.getDeb_cons());}
         if(consommation.getFin_cons()!= null ) { oldConsommationFound.setFin_cons(consommation.getFin_cons());}
         if(consommation.getOffre()!= null ) { oldConsommationFound.setOffre(consommation.getOffre());}
-        if(consommation.getNum_reçu()!= 0 ) { oldConsommationFound.setNum_reçu(consommation.getNum_reçu());}
 
 
         return consommationRepository.save(oldConsommationFound);

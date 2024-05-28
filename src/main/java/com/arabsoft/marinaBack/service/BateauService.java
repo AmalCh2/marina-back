@@ -67,6 +67,14 @@ public class BateauService {
         if(bateau.getMobile_bat()!= null ) { oldBateauFound.setMobile_bat(bateau.getMobile_bat());}
         if(bateau.getEmail_bat()!= null ) { oldBateauFound.setEmail_bat(bateau.getEmail_bat());}
         if(bateau.getObservation()!= null ) { oldBateauFound.setObservation(bateau.getObservation());}
+        if(bateau.getDate_mvt() != null ) { oldBateauFound.setDate_mvt(bateau.getDate_mvt());}/***************************************************************/
+        if(bateau.getDepart_mvt() != null ) { oldBateauFound.setDepart_mvt(bateau.getDepart_mvt());}/***************************************************************/
+        if(bateau.getArrivee_mvt() != null ) { oldBateauFound.setArrivee_mvt(bateau.getArrivee_mvt());}/***************************************************************/
+
+
+        if(bateau.getId_type_bat() != 0 ) { oldBateauFound.setId_type_bat(bateau.getId_type_bat());}
+        if(bateau.getId_cli() != 0 ) { oldBateauFound.setId_cli(bateau.getId_cli());}
+        if(bateau.getId_port() != 0 ) { oldBateauFound.setId_port(bateau.getId_port());}
         return bateauRepository.save(oldBateauFound);
     }
 
