@@ -33,9 +33,6 @@ public class TypeSejour implements Serializable{
     private int id_type_sej;
 
     private String lib_sej;
-    private Boolean loc_sej;
-    private String titulaire_sej;
-    private Boolean sej_annuel;
     private float sej_majoration;
 
 }

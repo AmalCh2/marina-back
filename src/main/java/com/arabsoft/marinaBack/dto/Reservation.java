@@ -25,18 +25,17 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Sejour")
-public class Sejour implements Serializable{
+@Table(name = "Reservation")
+public class Reservation implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_sej;
+    private int id_reservation;
+
 
     private Date deb_sej;
     private Date fin_sej;
     private int num_jours;
-
-    private int id_reservation;
     private int id_tarif;
     private int id_type_sej;
     private int id_emp;
@@ -44,6 +43,4 @@ public class Sejour implements Serializable{
     private String nom_bat;
     private int id_cli;
     private String nom_cli;
-
-
 }

@@ -52,6 +52,11 @@ public class ConsommationService {
         if(consommation.getDeb_cons()!= null ) { oldConsommationFound.setDeb_cons(consommation.getDeb_cons());}
         if(consommation.getFin_cons()!= null ) { oldConsommationFound.setFin_cons(consommation.getFin_cons());}
         if(consommation.getOffre()!= null ) { oldConsommationFound.setOffre(consommation.getOffre());}
+        if(consommation.getDate_sys()!= null ) { oldConsommationFound.setDate_sys(consommation.getDate_sys());}
+
+        if(consommation.getId_prest() != 0 ) { oldConsommationFound.setId_prest(consommation.getId_prest());}
+        if(consommation.getId_fact() != 0 ) { oldConsommationFound.setId_fact(consommation.getId_fact());}
+        if(consommation.getId_sej() != 0 ) { oldConsommationFound.setId_sej(consommation.getId_sej());}
 
 
         return consommationRepository.save(oldConsommationFound);

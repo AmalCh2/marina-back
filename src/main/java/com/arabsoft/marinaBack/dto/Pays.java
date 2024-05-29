@@ -32,6 +32,7 @@ public class Pays implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_pays;
 
+    private String nom_pays;
     private String nationnalite;
     private String pavillon;
 

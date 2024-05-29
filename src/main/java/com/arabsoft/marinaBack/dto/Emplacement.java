@@ -38,5 +38,7 @@ public class Emplacement implements Serializable{
 
     private int id_pelectrique;
     private int id_quai;
+    private String desig_quai;
+    private int rang_quai;
 
 }

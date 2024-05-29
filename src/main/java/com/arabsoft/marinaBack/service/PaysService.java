@@ -46,6 +46,7 @@ public class PaysService {
         }
 
         if(pays.getId_pays() != 0 ) { oldPaysFound.setId_pays(pays.getId_pays());}
+        if(pays.getNom_pays()!= null ) { oldPaysFound.setNom_pays(pays.getNom_pays());}
         if(pays.getPavillon()!= null ) { oldPaysFound.setPavillon(pays.getPavillon());}
         if(pays.getNationnalite()!= null ) { oldPaysFound.setNationnalite(pays.getNationnalite());}
 

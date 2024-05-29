@@ -34,6 +34,10 @@ public class Consommation implements Serializable{
     private Date date_sys;
     private String offre;
 
+    private int id_fact;
+    private int id_prest;
+    private int id_sej;
+
     @PrePersist
     protected void onCreate() {
         date_sys = new Date();
