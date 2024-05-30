@@ -24,6 +24,10 @@ public class BateauService {
         return bateau;
     }
 
+
+    public int getTotalBateauDansPort(Long id_port){
+        return bateauRepository.getTotalBateauDansPort(id_port);
+    }
     public Bateau addBateau(Bateau bateau) {
         Bateau bateauCreated = bateauRepository.save(bateau);
         return bateauCreated;
@@ -72,9 +76,6 @@ public class BateauService {
         if(bateau.getArrivee_mvt() != null ) { oldBateauFound.setArrivee_mvt(bateau.getArrivee_mvt());}/***************************************************************/
 
 
-        if(bateau.getId_type_bat() != 0 ) { oldBateauFound.setId_type_bat(bateau.getId_type_bat());}
-        if(bateau.getId_cli() != 0 ) { oldBateauFound.setId_cli(bateau.getId_cli());}
-        if(bateau.getId_port() != 0 ) { oldBateauFound.setId_port(bateau.getId_port());}
         return bateauRepository.save(oldBateauFound);
     }
 

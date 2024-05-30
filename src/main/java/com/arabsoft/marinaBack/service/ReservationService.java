@@ -48,14 +48,7 @@ public class ReservationService {
 
         if(reservation.getDeb_sej()!= null ) { oldReservationFound.setDeb_sej(reservation.getDeb_sej());}
         if(reservation.getNum_jours()!= 0 ) { oldReservationFound.setNum_jours(reservation.getNum_jours());}
-        if(reservation.getId_tarif()!= 0 ) { oldReservationFound.setId_tarif(reservation.getId_tarif());}
-        if(reservation.getId_type_sej()!= 0 ) { oldReservationFound.setId_type_sej(reservation.getId_type_sej());}
-        if(reservation.getId_emp()!= 0 ) { oldReservationFound.setId_emp(reservation.getId_emp());}
-        if(reservation.getId_bat()!= 0 ) { oldReservationFound.setId_bat(reservation.getId_bat());}
-        if(reservation.getNom_bat()!= null ) { oldReservationFound.setNom_bat(reservation.getNom_bat());}
-        if(reservation.getId_cli()!= 0 ) { oldReservationFound.setId_cli(reservation.getId_cli());}
-        if(reservation.getNom_cli()!= null ) { oldReservationFound.setNom_cli(reservation.getNom_cli());}
-        if(reservation.getId_reservation()!= 0 ) { oldReservationFound.setId_cli(reservation.getId_cli());}
+        if(reservation.getId_reservation()!= 0 ) { oldReservationFound.setId_reservation(reservation.getId_reservation());}
 
 
         return reservationRepository.save(oldReservationFound);

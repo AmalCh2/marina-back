@@ -3,16 +3,11 @@ package com.arabsoft.marinaBack.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.Table;
 
 
 @Entity
@@ -34,9 +29,21 @@ public class Consommation implements Serializable{
     private Date date_sys;
     private String offre;
 
-    private int id_fact;
-    private int id_prest;
-    private int id_sej;
+
+
+
+    @ManyToOne
+    @JoinColumn(name = "id_fact", nullable = false)
+    private Facture facture;
+
+    @ManyToOne
+    @JoinColumn(name = "id_prest", nullable = false)
+    private Prestation prestation;
+
+    @ManyToOne
+    @JoinColumn(name = "id_sej", nullable = false)
+    private Sejour sejour;
+
 
     @PrePersist
     protected void onCreate() {

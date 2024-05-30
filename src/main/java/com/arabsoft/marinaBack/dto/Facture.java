@@ -34,8 +34,5 @@ public class Facture implements Serializable{
     private boolean exo_cli;
     private String tbre_fiscale;
 
-    private int id_sej;
-    private int id_cli;
-
 
 }

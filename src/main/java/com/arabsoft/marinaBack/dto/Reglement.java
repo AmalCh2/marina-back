@@ -3,15 +3,11 @@ package com.arabsoft.marinaBack.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.Table;
 
 
 @Entity
@@ -30,7 +26,13 @@ public class Reglement implements Serializable{
     private Date date_regl;
 
 
-    private int id_fact;
-    private int id_carte;
+    @ManyToOne
+    @JoinColumn(name = "id_fact", nullable = false)
+    private Facture facture;
+
+    @ManyToOne
+    @JoinColumn(name = "id_carte", nullable = false)
+    private Carte carte;
+
 
 }

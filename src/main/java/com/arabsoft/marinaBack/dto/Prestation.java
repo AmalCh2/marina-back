@@ -2,15 +2,11 @@ package com.arabsoft.marinaBack.dto;
 
 import java.io.Serializable;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.Table;
 
 
 @Entity
@@ -29,6 +25,18 @@ public class Prestation implements Serializable{
     private float prix_unit_prest;
     private String secteur_prest;
     private int rang_prest;
+
+    @ManyToOne
+    @JoinColumn(name = "id_tva", nullable = false)
+    private Tva tva;
+
+    @ManyToOne
+    @JoinColumn(name = "id_type_prest", nullable = false)
+    private TypePrestation typePrestation;
+
+    @ManyToOne
+    @JoinColumn(name = "id_nature", nullable = false)
+    private Nature nature;
     
 }
 

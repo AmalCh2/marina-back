@@ -2,15 +2,11 @@ package com.arabsoft.marinaBack.dto;
 
 import java.io.Serializable;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.Table;
 
 
 @Entity
@@ -36,9 +32,14 @@ public class Emplacement implements Serializable{
     private int rang;
     private boolean blockage;
 
-    private int id_pelectrique;
-    private int id_quai;
-    private String desig_quai;
-    private int rang_quai;
+    @ManyToOne
+    @JoinColumn(name = "id_pelectrique", nullable = false)
+    private P_electrique p_electrique;
+
+    @ManyToOne
+    @JoinColumn(name = "id_quai", nullable = false)
+    private Quai quai;
+
+
 
 }

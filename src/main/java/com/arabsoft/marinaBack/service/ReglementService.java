@@ -51,9 +51,6 @@ public class ReglementService {
         if(reglement.getDate_regl()!= null ) { oldReglementFound.setDate_regl(reglement.getDate_regl());}
         if(reglement.getMnt_regle()!= 0 ) { oldReglementFound.setMnt_regle(reglement.getMnt_regle());}
 
-        if(reglement.getId_carte()!= 0 ) { oldReglementFound.setId_carte(reglement.getId_carte());}
-        if(reglement.getId_fact()!= 0 ) { oldReglementFound.setId_fact(reglement.getId_fact());}
-
         return reglementRepository.save(oldReglementFound);
     }
 

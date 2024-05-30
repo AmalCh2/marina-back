@@ -1,15 +1,14 @@
 package com.arabsoft.marinaBack.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -27,4 +26,13 @@ public class Utilisateur implements Serializable {
     private String mot_de_passe;
 
     private Long id_port;
+
+
+
+
+    @ManyToOne
+    @JoinColumn(name = "id_role", nullable = false)
+    private Role Role;
+
+
 }

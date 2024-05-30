@@ -49,14 +49,7 @@ public class SejourService {
         if(sejour.getId_sej() != 0 ) { oldSejourFound.setId_sej(sejour.getId_sej());}
         if(sejour.getDeb_sej()!= null ) { oldSejourFound.setDeb_sej(sejour.getDeb_sej());}
         if(sejour.getNum_jours()!= 0 ) { oldSejourFound.setNum_jours(sejour.getNum_jours());}
-        if(sejour.getId_tarif()!= 0 ) { oldSejourFound.setId_tarif(sejour.getId_tarif());}
-        if(sejour.getId_type_sej()!= 0 ) { oldSejourFound.setId_type_sej(sejour.getId_type_sej());}
-        if(sejour.getId_emp()!= 0 ) { oldSejourFound.setId_emp(sejour.getId_emp());}
-        if(sejour.getId_bat()!= 0 ) { oldSejourFound.setId_bat(sejour.getId_bat());}
-        if(sejour.getNom_bat()!= null ) { oldSejourFound.setNom_bat(sejour.getNom_bat());}
-        if(sejour.getId_cli()!= 0 ) { oldSejourFound.setId_cli(sejour.getId_cli());}
-        if(sejour.getNom_cli()!= null ) { oldSejourFound.setNom_cli(sejour.getNom_cli());}
-        if(sejour.getId_reservation()!= 0 ) { oldSejourFound.setId_cli(sejour.getId_cli());}
+
 
 
         return sejourRepository.save(oldSejourFound);

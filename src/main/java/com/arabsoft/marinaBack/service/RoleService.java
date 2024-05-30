@@ -47,8 +47,6 @@ public class RoleService {
         if(role.getId_role() != null ) { oldRoleFound.setId_role(role.getId_role());}
         if(role.getLib_role() != null ) { oldRoleFound.setLib_role(role.getLib_role());}
 
-        if(role.getId_utilisateur() != null ) { oldRoleFound.setId_utilisateur(role.getId_utilisateur());}
-
         return roleRepository.save(oldRoleFound);
     }
 }

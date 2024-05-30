@@ -2,15 +2,11 @@ package com.arabsoft.marinaBack.dto;
 
 import java.io.Serializable;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.Table;
 
 
 @Entity
@@ -36,6 +32,11 @@ public class Client implements Serializable{
     private String mobile_cli;
     private String email_cli;
     private boolean exo_cli;
-    private String nom_pays;
+    private int archived;
+
+    @ManyToOne
+    @JoinColumn(name = "id_pays", nullable = false)
+    private Pays pays;
+
 
 }
