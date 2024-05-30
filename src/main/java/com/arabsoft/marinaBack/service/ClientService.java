@@ -24,17 +24,6 @@ public class ClientService {
         return client;
     }
 
-    public List<Client> getClients() {
-        return clientRepository.afficher_client();
-    }
-
-    public List<Client> getArchievedClients() {
-        return clientRepository.afficher_archived_client();
-    }
-
-
-
-
     public Client addClient(Client client) {
         Client clientCreated = clientRepository.save(client);
         return clientCreated;
@@ -73,20 +62,9 @@ public class ClientService {
         */
 
         if(client.getEmail_cli() != null ) { oldClientFound.setEmail_cli(client.getEmail_cli());}
+        if(client.getNom_pays() != null ) { oldClientFound.setNom_pays(client.getNom_pays());}
 
         return clientRepository.save(oldClientFound);
-    }
-
-
-    public void archiveClient(long id) {
-        Optional<Client> optionalClient = clientRepository.findById(id);
-        if (optionalClient.isPresent()) {
-            Client client = optionalClient.get();
-            client.setArchived(1);
-            clientRepository.save(client);
-        } else {
-            throw new RuntimeException("Client not found");
-        }
     }
 
 }

@@ -31,12 +31,6 @@ public class BateauController {
         return bateauService.getBateauById(bateauId);
     }
 
-    //http://localhost:8080/bateau/total-bateau/{portId}
-    @GetMapping("/total-bateau/{portId}")
-    public int getTotalBateauDansPort(@PathVariable long portId) {
-        return bateauService.getTotalBateauDansPort(portId);
-    }
-
     //http://localhost:8080/bateau/add-bateau
     @PostMapping("/add-bateau")
     @ResponseBody

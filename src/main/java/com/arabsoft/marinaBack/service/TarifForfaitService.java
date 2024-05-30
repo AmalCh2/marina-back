@@ -46,6 +46,7 @@ public class TarifForfaitService {
         }
 
 
+        if(TarifForfait.getId_tarif_forfait() != 0 ) { oldTarifForfaitFound.setId_tarif_forfait(TarifForfait.getId_tarif_forfait());}
         if(TarifForfait.getType()!= null ) { oldTarifForfaitFound.setType(TarifForfait.getType());}
         if(TarifForfait.getAnnee()!= 0 ) { oldTarifForfaitFound.setAnnee(TarifForfait.getAnnee());}
         if(TarifForfait.getLargeur_bat()!= 0 ) { oldTarifForfaitFound.setLargeur_bat(TarifForfait.getLargeur_bat());}

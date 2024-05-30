@@ -48,8 +48,7 @@ public class SejourService {
 
         if(sejour.getId_sej() != 0 ) { oldSejourFound.setId_sej(sejour.getId_sej());}
         if(sejour.getDeb_sej()!= null ) { oldSejourFound.setDeb_sej(sejour.getDeb_sej());}
-        if(sejour.getNum_jours()!= 0 ) { oldSejourFound.setNum_jours(sejour.getNum_jours());}
-
+        if(sejour.getFin_sej()!= null ) { oldSejourFound.setFin_sej(sejour.getFin_sej());}
 
 
         return sejourRepository.save(oldSejourFound);

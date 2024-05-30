@@ -4,12 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -49,25 +53,4 @@ public class Bateau implements Serializable{
     private String mobile_bat;
     private String email_bat;
     private String observation;
-    private Date date_mvt;
-    private Date depart_mvt;
-    private Date arrivee_mvt;
-    private String commentaire_mvt;
-
-
-
-    @ManyToOne
-    @JoinColumn(name = "id_type_bat", nullable = false)
-    private TypeBateau typeBateau;
-
-    @ManyToOne
-    @JoinColumn(name = "id_cli", nullable = false)
-    private Client client;
-
-    @ManyToOne
-    @JoinColumn(name = "id_port", nullable = false)
-    private Port port;
-
-    private int id_emp;
-
 }

@@ -48,8 +48,6 @@ public class UtilisateurService {
         if(utilisateur.getId_utilisateur() != null ) { oldUtilisateurFound.setId_utilisateur(utilisateur.getId_utilisateur());}
         if(utilisateur.getNom_utilisateur() != null ) { oldUtilisateurFound.setNom_utilisateur(utilisateur.getNom_utilisateur());}
         if(utilisateur.getMot_de_passe() != null ) { oldUtilisateurFound.setMot_de_passe(utilisateur.getMot_de_passe());}
-
-        if(utilisateur.getId_port() != null ) { oldUtilisateurFound.setId_port(utilisateur.getId_port());}
         return utilisateurRepository.save(oldUtilisateurFound);
     }
 

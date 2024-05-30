@@ -47,6 +47,9 @@ public class TypeSejourService {
 
         if(typeSejour.getId_type_sej() != 0 ) { oldTypeSejourFound.setId_type_sej(typeSejour.getId_type_sej());}
         if(typeSejour.getLib_sej()!= null ) { oldTypeSejourFound.setLib_sej(typeSejour.getLib_sej());}
+        if(typeSejour.getLoc_sej()!= null ) { oldTypeSejourFound.setLoc_sej(typeSejour.getLoc_sej());}
+        if(typeSejour.getTitulaire_sej()!= null ) { oldTypeSejourFound.setTitulaire_sej(typeSejour.getTitulaire_sej());}
+        if(typeSejour.getSej_annuel()!= null ) { oldTypeSejourFound.setSej_annuel(typeSejour.getSej_annuel());}
         if(typeSejour.getSej_majoration()!= 0 ) { oldTypeSejourFound.setSej_majoration(typeSejour.getSej_majoration());}
         return typeSejourRepository.save(oldTypeSejourFound);
     }

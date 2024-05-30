@@ -20,22 +20,8 @@ public class ClientController {
     //http://localhost:8080/client/get-all-clients
     @GetMapping("/get-all-clients")
     @ResponseBody
-    public List<Client> getAllClients() {
+    public List<Client> getAllClientx() {
         return clientService.getAllClients();
-    }
-
-    //http://localhost:8080/client/get-clients
-    @GetMapping("/get-clients")
-    @ResponseBody
-    public List<Client> getClients() {
-        return clientService.getClients();
-    }
-
-    //http://localhost:8080/client/get-archieved-clients
-    @GetMapping("/get-archieved-clients")
-    @ResponseBody
-    public List<Client> getArchievedClientx() {
-        return clientService.getArchievedClients();
     }
 
     //http://localhost:8080/client/get-client-by-id/2
@@ -69,13 +55,6 @@ public class ClientController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Id not found, No update !!.");
         }
-    }
-
-   // http://localhost:8080/client/archive/1
-    @PutMapping("/archive/{id}")
-    public ResponseEntity<Void> archiveClient(@PathVariable long id) {
-        clientService.archiveClient(id);
-        return ResponseEntity.ok().build();
     }
 
 }

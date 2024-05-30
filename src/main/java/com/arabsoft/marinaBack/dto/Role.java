@@ -1,14 +1,15 @@
 package com.arabsoft.marinaBack.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
@@ -23,5 +24,4 @@ public class Role implements Serializable {
     private Long id_role;
 
     private String lib_role;
-
 }
