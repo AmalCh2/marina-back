@@ -54,6 +54,8 @@ public class ClientService {
         if(client.getTel_cli()!= null ) { oldClientFound.setTel_cli(client.getTel_cli());}
         if(client.getFax_cli()!= null ) { oldClientFound.setFax_cli(client.getFax_cli());}
         if(client.getMobile_cli()!= null ) { oldClientFound.setMobile_cli(client.getMobile_cli());}
+        if(client.getCode_postal_cliii() != 0 ) { oldClientFound.setCode_postal_cliii(client.getCode_postal_cliii());}
+
         /*
         if(client.getExo_cli() != null ) { oldClientFound.setExo_cli(client.getExo_cli());}
         */

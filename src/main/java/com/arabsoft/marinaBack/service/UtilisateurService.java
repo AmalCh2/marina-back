@@ -36,7 +36,7 @@ public class UtilisateurService {
         if(utilisateur.getNom_utilisateur() != null ) { oldUtilisateurFound.setNom_utilisateur(utilisateur.getNom_utilisateur());}
         if(utilisateur.getMot_de_passe() != null ) { oldUtilisateurFound.setMot_de_passe(utilisateur.getMot_de_passe());}
 
-        if(utilisateur.getId_port() != null ) { oldUtilisateurFound.setId_port(utilisateur.getId_port());}
+       /// if(utilisateur.getId_port() != null ) { oldUtilisateurFound.setId_port(utilisateur.getId_port());}
         return utilisateurRepository.save(oldUtilisateurFound);
     }
 

@@ -28,7 +28,9 @@ public class Utilisateur implements Serializable {
     private String nom_utilisateur;
     private String mot_de_passe;
 
-    private Long id_port;
+    @ManyToOne
+    @JoinColumn(name = "id_port", nullable = false)
+    private Port Port;
 
 
 

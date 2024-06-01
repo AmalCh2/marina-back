@@ -35,6 +35,7 @@ public class Client implements Serializable{
     private String email_cli;
     private boolean exo_cli;
     private int archived;
+    private int code_postal_cliii;
 
     @ManyToOne
     @JoinColumn(name = "id_pays", nullable = false)
