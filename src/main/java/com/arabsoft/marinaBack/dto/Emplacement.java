@@ -24,7 +24,6 @@ public class Emplacement implements Serializable{
     private float largeur_emp;
     private float longueur_emp;
     private float tirant_eau_emp;
-    private String tel_port;
     private String direction_emp;
     private String type_cord_emp;
     private String commentaire;

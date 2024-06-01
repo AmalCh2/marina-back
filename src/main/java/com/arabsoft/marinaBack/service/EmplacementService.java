@@ -50,7 +50,6 @@ public class EmplacementService {
         if(emplacement.getLargeur_emp()!= 0 ) { oldEmplacementFound.setLargeur_emp(emplacement.getLargeur_emp());}
         if(emplacement.getLongueur_emp()!= 0 ) { oldEmplacementFound.setLongueur_emp(emplacement.getLongueur_emp());}
         if(emplacement.getTirant_eau_emp()!= 0 ) { oldEmplacementFound.setTirant_eau_emp(emplacement.getTirant_eau_emp());}
-        if(emplacement.getTel_port()!= null ) { oldEmplacementFound.setTel_port(emplacement.getTel_port());}
         if(emplacement.getDirection_emp()!= null ) { oldEmplacementFound.setDirection_emp(emplacement.getDirection_emp());}
         if(emplacement.getType_cord_emp()!= null ) { oldEmplacementFound.setType_cord_emp(emplacement.getType_cord_emp());}
         if(emplacement.getCommentaire()!= null ) { oldEmplacementFound.setCommentaire(emplacement.getCommentaire());}

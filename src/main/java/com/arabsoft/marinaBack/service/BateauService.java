@@ -1,20 +1,15 @@
 package com.arabsoft.marinaBack.service;
-
 import com.arabsoft.marinaBack.dto.Bateau;
 import com.arabsoft.marinaBack.repository.BateauRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-
 @Service
 public class BateauService {
-
     @Autowired
     BateauRepository bateauRepository;
-
     public List<Bateau> getAllBateaux() {
         return bateauRepository.findAll();
     }
@@ -24,27 +19,25 @@ public class BateauService {
         return bateau;
     }
 
+
+    public int getTotalBateauDansPort(Long id_port){
+        return bateauRepository.getTotalBateauDansPort(id_port);
+    }
     public Bateau addBateau(Bateau bateau) {
         Bateau bateauCreated = bateauRepository.save(bateau);
         return bateauCreated;
     }
-
     public void deleteBateauByEmail(Long id) {
         bateauRepository.deleteById(id);
     }
-
     public Bateau updateBateau(Long id, Bateau bateau) {
-
         Bateau oldBateauFound;
-
         Optional<Bateau> oldBateau = bateauRepository.findById(id);
-
         if(oldBateau.isPresent()) {
             oldBateauFound = oldBateau.get();
         } else {
             throw new RuntimeException("id not present in database -> No update to be done !!");
         }
-
         if(bateau.getId_bat() != 0 ) { oldBateauFound.setId_bat(bateau.getId_bat());}
         if(bateau.getImmatriculation_bat()!= null ) { oldBateauFound.setImmatriculation_bat(bateau.getImmatriculation_bat());}
         if(bateau.getAutre_ident_nom_bat() != null ) { oldBateauFound.setAutre_ident_nom_bat(bateau.getAutre_ident_nom_bat());}
@@ -67,6 +60,11 @@ public class BateauService {
         if(bateau.getMobile_bat()!= null ) { oldBateauFound.setMobile_bat(bateau.getMobile_bat());}
         if(bateau.getEmail_bat()!= null ) { oldBateauFound.setEmail_bat(bateau.getEmail_bat());}
         if(bateau.getObservation()!= null ) { oldBateauFound.setObservation(bateau.getObservation());}
+        if(bateau.getDate_mvt() != null ) { oldBateauFound.setDate_mvt(bateau.getDate_mvt());}/***************************************************************/
+        if(bateau.getDepart_mvt() != null ) { oldBateauFound.setDepart_mvt(bateau.getDepart_mvt());}/***************************************************************/
+        if(bateau.getArrivee_mvt() != null ) { oldBateauFound.setArrivee_mvt(bateau.getArrivee_mvt());}/***************************************************************/
+
+
         return bateauRepository.save(oldBateauFound);
     }
 

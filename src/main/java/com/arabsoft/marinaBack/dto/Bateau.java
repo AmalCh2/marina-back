@@ -1,9 +1,9 @@
 package com.arabsoft.marinaBack.dto;
-
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,8 +18,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-
 @Entity
 @Getter
 @Setter
@@ -27,11 +25,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table(name = "Bateau")
 public class Bateau implements Serializable{
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_bat;
-
     private String immatriculation_bat;
     private String autre_ident_nom_bat;
     private String nom_bat;
@@ -53,4 +49,25 @@ public class Bateau implements Serializable{
     private String mobile_bat;
     private String email_bat;
     private String observation;
+    private Date date_mvt;
+    private Date depart_mvt;
+    private Date arrivee_mvt;
+    private String commentaire_mvt;
+
+
+
+    @ManyToOne
+    @JoinColumn(name = "id_type_bat", nullable = false)
+    private TypeBateau typeBateau;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cli", nullable = false)
+    private Client client;
+
+    @ManyToOne
+    @JoinColumn(name = "id_port", nullable = false)
+    private Port port;
+
+    private int id_emp;
+
 }
