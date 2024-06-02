@@ -33,6 +33,7 @@ public class Sejour implements Serializable{
     private Date deb_sej;
     private Date fin_sej;
     private int num_jours;
+    private int archived;
 
 
     @ManyToOne

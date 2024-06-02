@@ -1,5 +1,6 @@
 package com.arabsoft.marinaBack.service;
 import com.arabsoft.marinaBack.dto.Sejour;
+import com.arabsoft.marinaBack.dto.Sejour;
 import com.arabsoft.marinaBack.repository.SejourRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,5 +43,18 @@ public class SejourService {
 
 
         return sejourRepository.save(oldSejourFound);
+    }
+
+
+
+    public void archiveSejour(long id) {
+        Optional<Sejour> optionalSejour = sejourRepository.findById(id);
+        if (optionalSejour.isPresent()) {
+            Sejour sejour = optionalSejour.get();
+            sejour.setArchived(1);
+            sejourRepository.save(sejour);
+        } else {
+            throw new RuntimeException("Sejour not found");
+        }
     }
 }
