@@ -48,6 +48,20 @@ public class UtilisateurController {
         return ResponseEntity.ok().build();
     }
 
+    //http://localhost:8080/utilisateur/verifyUserPassword/7/1234
+    @GetMapping("/verifyUserPassword/{id}/{password}")
+    @ResponseBody
+    public int getuserPasswordById(@PathVariable("id") Long id, @PathVariable("password") String password) {
+        return utilisateurService.verifyuserPassword(id,password);
+    }
+
+    //http://localhost:8080/utilisateur/resetpassword/zz
+    @PutMapping("/resetpassword/{username}")
+    @ResponseBody
+    public void resetPassword(@PathVariable("username") String username) {
+        utilisateurService.resetPassword(username);
+    }
+
     //http://localhost:8080/utilisateur/update-utilisateur/4
     @PutMapping("/update-utilisateur/{id}")
     public ResponseEntity<?> updateUtilisateur(@PathVariable("id") Long id, @RequestBody Utilisateur utilisateur) {

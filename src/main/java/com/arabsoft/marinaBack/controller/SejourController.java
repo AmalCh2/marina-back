@@ -59,14 +59,5 @@ public class SejourController {
         }
     }
 
-
-
-    // http://localhost:8080/sejour/archive/1
-    @PutMapping("/archive/{id}")
-    public ResponseEntity<Void> archiveSejour(@PathVariable long id) {
-        sejourService.archiveSejour(id);
-        return ResponseEntity.ok().build();
-    }
-
 }
 

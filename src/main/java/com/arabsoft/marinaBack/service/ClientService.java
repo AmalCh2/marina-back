@@ -37,6 +37,8 @@ public class ClientService {
     public void deleteClientByEmail(Long id) {
         clientRepository.deleteById(id);
     }
+
+
     public Client updateClient(Long id, Client client) {
         Client oldClientFound;
         Optional<Client> oldClient = clientRepository.findById(id);

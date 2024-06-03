@@ -25,6 +25,8 @@ public class PaysService {
     public void deletePaysByEmail(Long id) {
         paysRepository.deleteById(id);
     }
+
+
     public Pays updatePays(Long id, Pays pays) {
         Pays oldPaysFound;
         Optional<Pays> oldPays = paysRepository.findById(id);
