@@ -54,6 +54,8 @@ public class FactureService {
         //if(facture.getExo_cli()!= null ) { oldFactureFound.setExo_cli(facture.getExo_cli());}
         if(facture.getTbre_fiscale()!= null ) { oldFactureFound.setTbre_fiscale(facture.getTbre_fiscale());}
         if(facture.getDate_fact()!= null ) { oldFactureFound.setDate_fact(facture.getDate_fact());}
+        if(facture.getLib_carte()!= null ) { oldFactureFound.setLib_carte(facture.getLib_carte());}
+        if(facture.getCpt_carte()!= 0 ) { oldFactureFound.setCpt_carte(facture.getCpt_carte());}
 
         return factureRepository.save(oldFactureFound);
     }

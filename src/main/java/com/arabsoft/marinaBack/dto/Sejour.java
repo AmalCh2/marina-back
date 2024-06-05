@@ -42,15 +42,15 @@ public class Sejour implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "id_type_sej", nullable = false)
-    private TypeSejour typeSejour;
+    private TypeSejour type_sej;
 
     @ManyToOne
     @JoinColumn(name = "id_emp", nullable = false)
-    private Emplacement emplacement;
+    private Emplacement emp;
 
     @ManyToOne
     @JoinColumn(name = "id_bat", nullable = false)
-    private Bateau bateau;
+    private Bateau bat;
 
 
 

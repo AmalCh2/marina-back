@@ -30,9 +30,7 @@ public class Reglement implements Serializable{
     @JoinColumn(name = "id_fact", nullable = false)
     private Facture facture;
 
-    @ManyToOne
-    @JoinColumn(name = "id_carte", nullable = false)
-    private Carte carte;
+
 
 
 }

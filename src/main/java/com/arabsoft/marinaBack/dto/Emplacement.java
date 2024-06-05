@@ -33,7 +33,7 @@ public class Emplacement implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "id_pelectrique", nullable = false)
-    private P_electrique p_electrique;
+    private P_electrique pelectrique;
 
     @ManyToOne
     @JoinColumn(name = "id_quai", nullable = false)

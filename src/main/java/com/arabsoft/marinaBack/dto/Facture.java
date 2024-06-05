@@ -33,6 +33,8 @@ public class Facture implements Serializable{
     private String lib_exo;
     private boolean exo_cli;
     private String tbre_fiscale;
+    private String lib_carte;
+    private int cpt_carte;
 
 
 }

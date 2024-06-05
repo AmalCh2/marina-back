@@ -1,6 +1,7 @@
 package com.arabsoft.marinaBack.controller;
 
 import com.arabsoft.marinaBack.dto.Sejour;
+import com.arabsoft.marinaBack.dto.Sejour;
 import com.arabsoft.marinaBack.service.SejourService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,31 @@ public class SejourController {
     public List<Sejour> getAllSejours() {
         return sejourService.getAllSejours();
     }
+
+
+
+
+    //http://localhost:8080/sejour/get-sejours
+    @GetMapping("/get-sejours")
+    @ResponseBody
+    public List<Sejour> getSejours() {
+        return sejourService.getSejours();
+    }
+
+    //http://localhost:8080/sejour/get-archieved-sejours
+    @GetMapping("/get-archieved-sejours")
+    @ResponseBody
+    public List<Sejour> getArchievedSejourx() {
+        return sejourService.getArchievedSejours();
+    }
+
+
+
+
+
+
+
+
 
     //http://localhost:8080/sejour/get-sejour-by-id/2
     @GetMapping("/get-sejour-by-id/{sejourId}")

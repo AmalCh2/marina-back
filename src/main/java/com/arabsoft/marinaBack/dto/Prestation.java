@@ -36,7 +36,7 @@ public class Prestation implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "id_type_prest", nullable = false)
-    private TypePrestation typePrestation;
+    private TypePrestation type_prest;
 
     @ManyToOne
     @JoinColumn(name = "id_nature", nullable = false)

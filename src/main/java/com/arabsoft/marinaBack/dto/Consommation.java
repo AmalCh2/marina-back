@@ -37,15 +37,15 @@ public class Consommation implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "id_fact", nullable = false)
-    private Facture facture;
+    private Facture fact;
 
     @ManyToOne
     @JoinColumn(name = "id_prest", nullable = false)
-    private Prestation prestation;
+    private Prestation prest;
 
     @ManyToOne
     @JoinColumn(name = "id_sej", nullable = false)
-    private Sejour sejour;
+    private Sejour sej;
 
 
 
